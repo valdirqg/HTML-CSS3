@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desafio 14 - Tabela com escopos definidos</title>
+    <style>
+        table {
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 2em;
+            width: 700px;
+        }
+
+        table td, th {
+            border: 1px solid black;
+            border-collapse: collapse;
+        }
+
+        table th {
+            text-align: center;
+            font-weight: bold;
+        }
+
+        .destaque {
+            background-color: lightslategray;
+            color: white;
+        }
+
+        .media {
+            text-align: left;
+        }
+
+        .numero {
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <table>
+        <thead class="destaque">
+            <tr>
+                <th scope="col" rowspan="2">Área</th>
+                <th scope="col" rowspan="2">Disciplinas</th>
+                <th colspan="2" scope="colgroup">Notas</th>
+                <th rowspan="2" scope="col">Média</th>
+            </tr>
+            <tr>
+                <th scope="col">Nota 1</th>
+                <th scope="col">Nota 2</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <th rowspan="4" scope="rowgroup">Exatas</th>
+                <td>Matemática</td>
+                <td class="numero">0.0</td>
+                <td class="numero">0.0</td>
+                <td class="numero">0.0</td>
+            </tr>
+            <tr>
+                <td>Física</td>
+                <td class="numero">0.0</td>
+                <td class="numero">0.0</td>
+                <td class="numero">0.0</td>
+            </tr>
+            <tr>
+                <td>Química</td>
+                <td class="numero">0.0</td>
+                <td class="numero">0.0</td>
+                <td class="numero">0.0</td>
+            </tr>
+            <tr>
+                <td>Biologia</td>
+                <td class="numero">0.0</td>
+                <td class="numero">0.0</td>
+                <td class="numero">0.0</td>
+            </tr>
+            <tr class="destaque">
+                <td colspan="4" scope="row">Média de Exatas</td>
+                <td class="numero">0.0</td>
+            </tr>
+            <tr>
+                <th rowspan="2" scope="rowgroup">Humanas</th>
+                <td>História</td>
+                <td class="numero">0.0</td>
+                <td class="numero">0.0</td>
+                <td class="numero">0.0</td>
+            </tr>
+            <tr>
+                <td>Geografia</td>
+                <td class="numero">0.0</td>
+                <td class="numero">0.0</td>
+                <td class="numero">0.0</td>
+            </tr>
+            <tr class="destaque">
+                <td colspan="4" scope="row">Média de Humanas</td>
+                <td class="numero">0.0</td>
+            </tr>
+        </tbody>
+    </table>
+</body>
+</html>
